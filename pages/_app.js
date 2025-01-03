@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import Head from 'next/head'
 import '@/styles/globals.css'
 
 export default function App({ Component, pageProps }) {
@@ -8,8 +9,13 @@ export default function App({ Component, pageProps }) {
   }, [])
 
   return (
-    <div className="min-h-screen">
-      <Component {...pageProps} />
-    </div>
+    <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      <div className="min-h-screen">
+        <Component {...pageProps} />
+      </div>
+    </>
   )
 }

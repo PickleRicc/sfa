@@ -165,7 +165,7 @@ export default function Home() {
                 className="object-cover"
                 sizes="100vw"
                 quality={85}
-                priority
+                priority={true}
               />
               <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/30"></div>
             </div>
@@ -256,6 +256,7 @@ export default function Home() {
                       className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       quality={85}
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
